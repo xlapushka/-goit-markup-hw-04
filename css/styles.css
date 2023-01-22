@@ -10,6 +10,7 @@
   --navy-blue-modal: rgba(46, 47, 66, 0.4);
   --grey: rgba(46, 47, 66, 0.7);
   --white: #fff;
+  --footer-social: rgba(255, 255, 255, 0.1);
 
   --marg: 24px;
 }
@@ -54,8 +55,8 @@ img {
 
 .container {
   margin: 0 auto;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
 
   width: 1158px;
 }
@@ -126,26 +127,22 @@ img {
 /* ====================HEADER+=========================== */
 
 header {
-  display: block;
-  align-items: center;
+  /* display: block;
+  align-items: center; */
 
   background-color: var(--white);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-header .menu {
+header .menu,
+header nav {
   display: flex;
   align-items: center;
 }
 
 header .menu > address {
   margin-left: auto;
-}
-
-header nav {
-  display: flex;
-  align-items: center;
 }
 
 header .logo {
@@ -185,13 +182,43 @@ header .contact-us {
   font-style: normal;
 }
 
+/* header .contact-us .social-contact-icon {
+  fill: var(--slate);
+  display: inline-block;
+}
+
+header .contact-us .email,
+header .contact-us .phone {
+  display: flex;
+  align-items: center;
+}
+
+.header-contact-icon {
+  padding: 0;
+  margin-right: 12px;
+  display: inline-block;
+}
+
+.header-contact-icon.phone {
+  margin-right: 6px;
+}
+
+.email:is(:hover, :focus),
+.phone:is(:hover, :focus) {
+  fill: var(--iris);
+} */
+
 /* ====================MAIN=========================== */
 
 main .hero {
   padding-top: 188px;
   padding-bottom: 188px;
-  height: 600px;
-  background-color: var(--navy-blue);
+  background-color: var(--grey);
+  background-image: linear-gradient(var(--grey), var(--grey)),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1440px 603px;
 }
 
 main .hero h1 {
@@ -223,12 +250,13 @@ main .hero button {
 
 main .hero button:hover,
 main .hero button:focus {
-  background-color: var(--white);
-  border-color: var(--white);
-  color: var(--iris);
+  background-color: var(--ocean);
+  border-color: var(--ocean);
+  color: var(--cloud);
 }
 
 /* ============================================= */
+
 main .about {
   display: flex;
   justify-content: space-between;
@@ -244,14 +272,73 @@ main .about li:not(:last-child) {
 
 main .about h3 {
   color: var(--navy-blue);
+  font-style: normal;
+  font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
+  letter-spacing: 0.02em;
 }
 
 main .about p {
-  padding-top: 8px;
+  margin-top: 8px;
 
   font-weight: 400;
+}
+
+main .about .strategy h3::before {
+  display: block;
+  content: "";
+  background-color: var(--cloud);
+  background-image: url(../images/adv-antenna.svg);
+  height: 112px;
+  width: 264px;
+  padding: 24px 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  margin-bottom: 8px;
+}
+
+main .about .punctuality h3::before {
+  display: block;
+  content: "";
+  background-color: var(--cloud);
+  background-image: url(../images/adv-clock.svg);
+  height: 112px;
+  width: 264px;
+  padding: 24px 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  margin-bottom: 8px;
+}
+
+main .about .diligence h3::before {
+  display: block;
+  content: "";
+  background-color: var(--cloud);
+  background-image: url(../images/adv-diagram.svg);
+  height: 112px;
+  width: 264px;
+  padding: 24px 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  margin-bottom: 8px;
+}
+
+main .about .tech h3::before {
+  display: block;
+  content: "";
+  background-color: var(--cloud);
+  background-image: url(../images/adv-astronaut.svg);
+  height: 112px;
+  width: 264px;
+  padding: 24px 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  margin-bottom: 8px;
 }
 
 /* ============================================= */
@@ -263,7 +350,8 @@ main .what-we-are-doing {
 }
 
 main .what-we-are-doing h2,
-main .our-team h2 {
+main .our-team h2,
+main .customers h2 {
   margin-top: 0;
   margin-bottom: 72px;
   color: var(--navy-blue);
@@ -294,7 +382,6 @@ main .our-team .card-set {
 
 main .our-team .card {
   flex-basis: calc(100% / 4 - 24px);
-  /* borders 8px. прибрала коли перенесла container і розздивилась, нема border*/
   margin-left: 24px;
 
   background-color: var(--white);
@@ -324,6 +411,75 @@ main .our-team p {
   line-height: 1.5;
 }
 
+.social-contacts {
+  display: flex;
+  align-content: center;
+  gap: var(--marg);
+  padding-top: 4px;
+  padding-bottom: 36px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.social-contact-item {
+  width: 40px;
+  height: 40px;
+}
+
+.social-contact-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-contact-icon {
+  fill: var(--cloud);
+}
+
+.social-contact-link:is(:hover, :focus) {
+  background-color: var(--ocean);
+}
+
+/* ============================================= */
+
+main .customers {
+  display: flex;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  background-color: var(--white);
+}
+
+main .customers .customers-list {
+  display: flex;
+  color: var(--light-slate);
+  fill: var(--light-slate);
+  gap: var(--marg);
+}
+
+main .customers .customers-list-item svg {
+  border: 1px solid var(--light-slate);
+  fill: var(--light-slate);
+  border-radius: 4px;
+  width: 168px;
+  height: 88px;
+  padding: 16px 32px;
+}
+
+main .customers .customers-list-item svg:is(:hover, :focus) {
+  border: 1px solid var(--iris);
+  fill: var(--iris);
+}
+
+main .customers .customers-list-icon {
+  width: 100%;
+  height: 56px;
+}
+
 /* ====================FOOTER=========================== */
 
 footer {
@@ -331,8 +487,6 @@ footer {
 }
 
 footer .box {
-  padding-top: 100px;
-  padding-bottom: 100px;
   width: 264px;
 }
 
@@ -344,11 +498,67 @@ footer .footer-logo {
   line-height: 1.33;
 }
 
-footer p {
+footer .box p {
   color: var(--cornflower);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.33;
+  margin-top: 16px;
+}
+
+.social-media {
+  width: 208px;
+}
+
+.social-media-contacts {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.social-media-contact-item {
+  width: 40px;
+  height: 40px;
+}
+
+.social-media-contact-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--footer-social);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-contact-icon {
+  fill: transparent;
+}
+
+.social-media-contact-link:is(:hover, :focus) {
+  background-color: var(--green);
+}
+
+.social-media p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  color: var(--cloud);
+}
+
+.foot {
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 120px;
+
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 /* =====================index-1=============== */
@@ -364,9 +574,8 @@ footer p {
 
 .portfolio .filter {
   display: flex;
-  justify-content: space-around;
-  padding-right: 25%;
-  padding-left: 25%;
+  gap: 24px;
+  justify-content: center;
   margin-bottom: 72px;
 }
 
@@ -411,6 +620,11 @@ footer p {
 
   /* border: 0.5px solid var(--cloud); */
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.projects .projects-card:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .projects .projects-card-descr {
