@@ -285,11 +285,11 @@ main .about p {
   font-weight: 400;
 }
 
-main .about .strategy h3::before {
+main .about .strategy::before {
   display: block;
   content: "";
   background-color: var(--cloud);
-  background-image: url(../images/adv-antenna.svg);
+  background-image: url(../images/advantages-antenna.svg);
   height: 112px;
   width: 264px;
   padding: 24px 100px;
@@ -299,11 +299,11 @@ main .about .strategy h3::before {
   margin-bottom: 8px;
 }
 
-main .about .punctuality h3::before {
+main .about .punctuality::before {
   display: block;
   content: "";
   background-color: var(--cloud);
-  background-image: url(../images/adv-clock.svg);
+  background-image: url(../images/advantages-clock.svg);
   height: 112px;
   width: 264px;
   padding: 24px 100px;
@@ -313,11 +313,11 @@ main .about .punctuality h3::before {
   margin-bottom: 8px;
 }
 
-main .about .diligence h3::before {
+main .about .diligence::before {
   display: block;
   content: "";
   background-color: var(--cloud);
-  background-image: url(../images/adv-diagram.svg);
+  background-image: url(../images/advantages-diagram.svg);
   height: 112px;
   width: 264px;
   padding: 24px 100px;
@@ -327,11 +327,11 @@ main .about .diligence h3::before {
   margin-bottom: 8px;
 }
 
-main .about .tech h3::before {
+main .about .tech::before {
   display: block;
   content: "";
   background-color: var(--cloud);
-  background-image: url(../images/adv-astronaut.svg);
+  background-image: url(../images/advantages-astronaut.svg);
   height: 112px;
   width: 264px;
   padding: 24px 100px;
@@ -399,11 +399,16 @@ main .our-team .card-descr {
 main .our-team .card-descr h3 {
   color: var(--navy-blue);
 
+  font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
+  letter-spacing: 0.02em;
 }
 
 main .our-team p {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
   color: var(--slate);
 
   font-weight: 400;
@@ -415,10 +420,6 @@ main .our-team p {
   display: flex;
   align-content: center;
   gap: var(--marg);
-  padding-top: 4px;
-  padding-bottom: 36px;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .social-contact-item {
@@ -618,7 +619,6 @@ footer .box p {
   margin-right: var(--marg);
   margin-bottom: calc(2 * var(--marg));
 
-  /* border: 0.5px solid var(--cloud); */
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
@@ -632,9 +632,12 @@ footer .box p {
   padding-right: 16px;
   padding-bottom: 32px;
   padding-left: 16px;
+
+  border: 0.5px solid var(--cloud);
 }
 
 .projects .projects-card-descr h2 {
+  padding-bottom: 8px;
   color: var(--navy-blue);
 
   font-size: 20px;
