@@ -438,7 +438,7 @@ main .our-team p {
 }
 
 .social-contact-icon {
-  fill: var(--cloud);
+  fill: currentColor;
 }
 
 .social-contact-link:is(:hover, :focus) {
@@ -457,8 +457,6 @@ main .customers {
 
 main .customers .customers-list {
   display: flex;
-  color: var(--light-slate);
-  fill: var(--light-slate);
   gap: var(--marg);
 }
 
@@ -533,7 +531,7 @@ footer .box p {
 }
 
 .social-media-contact-icon {
-  fill: transparent;
+  fill: currentColor;
 }
 
 .social-media-contact-link:is(:hover, :focus) {
